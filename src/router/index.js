@@ -4,6 +4,8 @@ import Index from '../views/index'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: '/hot/',
   routes: [
     {
       path: '/',
