@@ -77,6 +77,11 @@
           progress: false
         }
       },
+      mounted() {
+        this.$axios.post('/api/roles/findUserAll').then(res=>{
+          console.log(res)
+        })
+      },
       methods:{
         // 刷新
         refresh(){
