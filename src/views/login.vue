@@ -64,20 +64,33 @@
             onLogin(){
                 if (this.user.username===''){
                     this.userFalse = true
+                    this.$Message.error('请输入用户名');
                 }else if (this.user.password===''){
                     this.passFalse = true
+                    this.$Message.error('请输入密码');
                 }else {
-                    this.$axios.post('/api/passport/signin?username='+this.user.username+'&password='+this.user.password).then(res =>{
+                    this.$axios.post('/api/passport/signin?username='+this.user.username+'&password='+this.user.password).then((res) =>{
                         console.log(res,'res')
                         if (res.data.errCode===0){
                             this.progress = true
                             this.disabled = true
                             setTimeout(()=>{
+                                sessionStorage.setItem("accessToken", 'token');
+                                localStorage.setItem("accessToken", 'token');
+
+                                localStorage.setItem("user", JSON.stringify(res.data.data));
                                 this.progress = false
                                 this.disabled = false
-                                this.$router.push('/')
+                                this.$router.push({name: 'index',params: { userLogin:'1' } })
                             },1000)
+                        }else {
+                            this.$Notice.error({
+                                title: '登录失败！',
+                                desc: true ? '' : 'Here is the notification description. Here is the notification description. '
+                            });
                         }
+                    }).catch(err=>{
+
                     })
                 }
             },

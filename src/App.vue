@@ -1,22 +1,6 @@
 <template>
   <div id="app">
     <router-view/>
-<!--    <div class="mdui-fab-wrapper" id="exampleFab">-->
-<!--      <button class="mdui-fab mdui-ripple mdui-color-theme-accent">-->
-<!--        &lt;!&ndash; 默认显示的图标 &ndash;&gt;-->
-<!--        <i class="mdui-icon material-icons">add</i>-->
-
-<!--        &lt;!&ndash; 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 &ndash;&gt;-->
-<!--        <i class="mdui-icon mdui-fab-opened material-icons">add</i>-->
-<!--      </button>-->
-<!--      <div class="mdui-fab-dial">-->
-<!--        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink"><i class="mdui-icon material-icons">backup</i></button>-->
-<!--        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red"><i class="mdui-icon material-icons">bookmark</i></button>-->
-<!--        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange"><i class="mdui-icon material-icons">access_alarms</i></button>-->
-<!--        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"><i class="mdui-icon material-icons">touch_app</i></button>-->
-<!--      </div>-->
-<!--    </div>-->
-
   </div>
 </template>
 
